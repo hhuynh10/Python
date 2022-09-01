@@ -1,0 +1,38 @@
+h2 {
+    color: #dbbb39;
+    text-decoration: underline;
+}
+
+.container {
+    width: 440px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #03444f;
+    padding: 20px;
+    color: white;
+}
+
+p {
+    font-size: 17px;
+}
+
+hr {
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+input {
+    margin-right: 320px;
+    padding-right: 15px;
+    background-color: #dbbb39;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    width: 70px;
+    box-shadow: 2px 2px 2px black;
+}
+
+input:hover {
+    background-color: grey;
+    color: white;
+}

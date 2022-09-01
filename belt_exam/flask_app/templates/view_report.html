@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Report</title>
+</head>
+<body>
+    <h1>Sasquatch Websighting</h1>
+    <h3>{{this_user.first_name}} {{this_user.last_name}}</h3>
+    <a href="/dashboard">
+        <button>Dashboard</button>
+    </a>
+    <a href="/users/logout">
+        <button>Logout</button>
+    </a>
+    <h2>{{report.location}} on {{report.date}}</h2>
+    <p>What happened: {{report.description}}</p>
+    <p># of Sasquatches: {{report.num}}</p>
+    
+</body>
+</html>

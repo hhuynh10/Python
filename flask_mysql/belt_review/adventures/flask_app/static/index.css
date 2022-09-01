@@ -1,0 +1,12 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.adventures{
+    display: flex;
+    flex-flow: row wrap;
+}
+.first_div{
+    margin-right: 100px;
+}

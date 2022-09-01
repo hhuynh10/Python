@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 440px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #03444f;
+    padding: 20px;
+}
+
+h1 {
+    color: #dbbb39;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+form {
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 17px;
+}
+label, input, select, textarea {
+    margin-bottom: 15px;
+}
+
+input, select, textarea{
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+input, select {
+    height: 30px;
+    border: 1px solid grey;
+}
+
+.submit {
+    margin-right: 320px;
+    padding-right: 15px;
+    background-color: #dbbb39;
+    box-shadow: 2px 2px 2px black;
+}
+
+.submit:hover {
+    background-color: grey;
+    color: white;
+}

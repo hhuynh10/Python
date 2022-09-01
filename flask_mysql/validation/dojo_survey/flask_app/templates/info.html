@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Dojo Survey</h1>
+        <form action="/create" method = 'POST'>
+        {% with messages = get_flashed_messages() %}  
+            {% if messages %}                           
+                {% for message in messages %}          
+                    <p>{{message}}</p>                  
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+            <label>
+                Name:
+                <input type="text" name="name">
+            </label>
+            <label>
+                Location:
+                <select name="location">
+                    <option value="">Choose one</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Seatle">Seatle</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Burbank">Burbank</option>
+                </select>
+            </label>
+            <label>
+                Language:
+                <select name="language">
+                    <option value="">Choose one</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="C++">C++</option>
+                    <option value="MERN">MERN</option>
+            </label>
+            <label>
+                Comments:
+                <textarea name="comment" cols="30" rows="10"></textarea>
+            </label>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

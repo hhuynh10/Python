@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Adventures</h1>
+        {% for adventure in adventures %}
+            <p>User: {{adventure.users.first_name}}</p>
+            <p>Title: {{adventure.title}}</p>
+            <p>Place: {{adventure.place}}</p>
+            <p>Date: {{adventure.date}}</p>
+            <a href="/view/{{adventure.id}}">View</a>
+            {% if adventure.user_id == session.user_id %}
+                <a href="/delete/{{adventure.id}}">Delete</a>
+                <a href="/edit/{{adventure.id}}">Edit</a>
+            {% endif %}
+            <hr>
+        {% endfor %}
+    <a href="/dashboard">
+        <button>Home</button>
+    </a>
+    <a href="/users/logout">
+        <button>Logout</button>
+    </a>
+</body>
+</html>

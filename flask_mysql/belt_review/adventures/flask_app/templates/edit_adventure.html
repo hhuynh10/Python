@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='edit_adventure.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{this_user.first_name}}</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action="/edit/adventure" method = 'POST'>
+        <input type="hidden" name="id" value="{{adventure.id}}">
+        <label for="title">Title:</label>
+        <input type="text" name="title" value="{{adventure.title}}">
+        <label for="place">Place:</label>
+        <input type="text" name="place" value="{{adventure.place}}">
+        <label for="date">Date:</label>
+        <input type="date" name="date" value="{{adventure.date}}">
+        <label for="desciption">Description</label>
+        <textarea name="description" cols="30" rows="5">{{adventure.description}}</textarea>
+        <input type="submit" value="Edit">
+    </form>
+</body>
+</html>
