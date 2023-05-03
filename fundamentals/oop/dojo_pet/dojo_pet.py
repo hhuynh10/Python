@@ -53,5 +53,5 @@ ninja2 = Ninja('Julien', 'Auza', pet2, 'Blue Buffalo', 'Adult Food')
 ninja1.walk().feed().bathe()
 print(pet1.health)
 
-ninja2.walk().feed().walk().feed().bathe().play().feed().bathe()
+ninja2.walk().feed().walk().feed().bathe()
 print(pet2.health, pet2.energy)

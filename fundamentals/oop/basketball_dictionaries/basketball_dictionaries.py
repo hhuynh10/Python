@@ -13,6 +13,7 @@ class Player:
         player_object = []
         for player in players:
             player_object.append(cls(player))
+            print(player_object)
             return player_object
 
 kevin = {
@@ -83,3 +84,5 @@ for player in players:
     new_team.append(player)
 
 print(new_team)
+
+Player.get_team(players)
